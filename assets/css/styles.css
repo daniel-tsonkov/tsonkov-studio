@@ -256,7 +256,7 @@ img {
   text-align: center;
 }
 
-.home_title {
+.home__title {
   color: var(--white-color);
   font-size: var(--big-font-size);
   font-weight: var(--font-bold);
