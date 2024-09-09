@@ -43,7 +43,7 @@ const swiperServices = new Swiper('.services__swiper', {
   loop: true,
   grabCursor: true,
   spaceBetween: 24,
-  slidesPerView: 'auto', 
+  slidesPerView: 'auto',
 
   // Navigation arrows
   navigation: {
@@ -53,9 +53,34 @@ const swiperServices = new Swiper('.services__swiper', {
 });
 
 /*=============== SHOW SCROLL UP ===============*/
-
+const scrollUp = () => {
+  const scrollUp = document.getElementById('scroll-up')
+  //When the scroll is higher than 350 viewport height, and the show-scroll class to the a tah with the scroll
+  this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+    : scrollUp.classList.remove('show-scroll');
+}
+window.addEventListener('scroll', scrollUp);
+scrollUp();
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const section = document.querySelectorAll('section[id]');
 
+const scrollActive = () => {
+  const scrollDown = window.scrollY;
+
+  section.forEach(current => {
+    const sectionHeight = current.offsetHeight,
+    sectionTop = current.offsetTop - 58,
+    sectionId = current.getAttribute('id'),
+    sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+
+    if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+      sectionClass.classList.add('active-link');
+    } else {
+      sectionClass.classList.remove('active-link');
+    }
+  })
+}
+window.addEventListener('scroll', scrollActive);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
