@@ -38,6 +38,20 @@ const bgHeader = () => {
 window.addEventListener('scroll', bgHeader);
 bgHeader();
 
+/*=============== CERTIFICATES SERVICES ===============*/
+const swiperCertificates = new Swiper('.certificates__swiper', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 24,
+  slidesPerView: 'auto',
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.sswiper-button-next',
+    prevEl: '.sswiper-button-prev',
+  },
+});
+
 /*=============== SWIPER SERVICES ===============*/
 const swiperServices = new Swiper('.services__swiper', {
   loop: true,
