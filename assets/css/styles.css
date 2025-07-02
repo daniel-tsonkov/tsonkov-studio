@@ -476,6 +476,37 @@ img {
   padding-bottom: 4rem;
 }
 
+.certificates-swiper-button-prev::after,
+.certificates-swiper-button-next::after {
+  content: '';
+}
+
+.certificates-swiper-button-prev,
+.certificates-swiper-button-next {
+  top: initial;
+  bottom: 0;
+  width: 32px;
+  height: 32px;
+  background-color: var(--container-color);
+  box-shadow: 0, 2px, 8px hsla(255, 80%, 4%, .1);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: var(--title-color);
+}
+
+.certificates-swiper-button-prev {
+  left: calc(50% - 3rem);
+}
+
+.certificates-swiper-button-next {
+  right: calc(50% - 3rem);
+}
+
+
+
+
+
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: '';
@@ -970,6 +1001,11 @@ img {
 
   .services__shape {
     height: 330px;
+  }
+
+  .certificates-swiper-button-next,
+  .certificates-swiper-button-prev {
+    bottom: 3rem;
   }
 
   .swiper-button-next,

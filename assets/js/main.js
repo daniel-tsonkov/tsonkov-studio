@@ -47,8 +47,8 @@ const swiperCertificates = new Swiper('.certificates__swiper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.sswiper-button-next',
-    prevEl: '.sswiper-button-prev',
+    nextEl: '.certificates-swiper-button-next',
+    prevEl: '.certificates-swiper-button-prev',
   },
 });
 
@@ -106,6 +106,7 @@ const sr = ScrollReveal ({
   //reset: true //Animation repeat
 });
 
+sr.reveal(`.home__content, .certificates__data, .certificates__swiper, .footer__container`);
 sr.reveal(`.home__content, .services__data, .services__swiper, .footer__container`);
 sr.reveal(`.home__images`, {origin: 'bottom', delay: 1000});
 sr.reveal(`.about__images, .contact__img`, {origin: 'left'});
